@@ -8,91 +8,95 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   
-<style>
-  /* Limpiamos el header para que no haya duplicados */
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centra el nav */
-    padding: 15px 5%;
-    position: relative; 
-    background-color: #fff; /* O el color de tu fondo */
-    width: 100%;
-    box-sizing: border-box;
-  }
+  <style>
+    /* Estilos corregidos para centrar el menú */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center; /* Centra el nav */
+      padding: 15px 5%;
+      position: relative; 
+      background-color: rgba(255, 255, 255, 0.9); /* Un poco de transparencia por si el banner sube */
+      width: 100%;
+      box-sizing: border-box;
+      z-index: 1000;
+    }
 
-  /* El logo se posiciona absoluto para no empujar al menú */
-  .brand {
-    position: absolute;
-    left: 5%;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
+    .brand {
+      position: absolute;
+      left: 5%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-  /* El menú de navegación */
-  nav {
-    display: flex;
-    gap: 20px;
-    margin: 0 auto;
-  }
+    .brand img {
+      height: 45px;
+    }
 
-  nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    font-size: 0.9rem;
-    white-space: nowrap; /* Evita que los nombres se partan en dos líneas */
-  }
+    nav {
+      display: flex;
+      gap: 20px;
+    }
 
-  nav a.active {
-    color: #27ae60;
-  }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
 
-  /* Ajuste para que el banner esté centrado */
-  .banner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding-top: 50px;
-  }
+    nav a.active {
+      color: #27ae60;
+    }
 
-  .btn-banner {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px auto;
-    padding: 12px 24px;
-    background: white;
-    border-radius: 50px;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-  }
-</style>
-<header>
-  <div class="brand">
-    <img src="img/logo.png" alt="Logo" style="height: 40px;">
-    <span>Family Trail</span>
-  </div>
-  
-  <nav>
-    <a href="index.html" class="active">Inici</a>
-    <a href="info.html">Info</a>
-    <a href="programa.html">Programa</a>
-    <a href="galeria.html">Galeria</a>
-    <a href="preparant.html">Preparant</a>
-    <a href="#colab">Col·laboradors</a>
-    <a href="#contacte">Contacte</a>
-  </nav>
-</header>
+    /* Centrado del banner y botones */
+    .banner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .btn-banner {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px auto;
+      padding: 12px 28px;
+      background: white;
+      border-radius: 50px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 40px 20px;
+    }
+
+    .card {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 300px;
+    }
+  </style>
 </head>
 
 <body>
+
 <header>
   <div class="brand">
-    <img src="img/logo.png" alt="Family Trail Logo" class="logo" style="height: 50px;">
+    <img src="img/logo.png" alt="Family Trail Logo">
     <span>Family Trail</span>
   </div>
   
@@ -130,25 +134,25 @@
 </section>
 
 <section class="descobreix" id="descobreix">
-  <h2 class="section-title reveal from-left" style="text-align: center;">Descobreix el Family Trail</h2>
-  <p class="section-subtitle reveal from-left" style="--d: 80ms; text-align: center;">Una experiència única per a tota la família al cor de la natura</p>
+  <h2 class="section-title" style="text-align: center;">Descobreix el Family Trail</h2>
+  <p class="section-subtitle" style="text-align: center;">Una experiència única per a tota la família al cor de la natura</p>
   
   <div class="cards">
-    <div class="card reveal from-left fade-card" style="--d: 0ms">
+    <div class="card">
       <div class="icon"><i class="fa-solid fa-trophy"></i></div>
       <h3>Programa</h3>
       <p>Horaris, activitats i premis per a tots els participants</p>
       <a href="programa.html" class="more">Descobreix més →</a>
     </div>
 
-    <div class="card reveal from-left fade-card" style="--d: 120ms">
+    <div class="card">
       <div class="icon"><i class="fa-solid fa-camera"></i></div>
       <h3>Galeria</h3>
       <p>Fotos i vídeos de les edicions anteriors del trail</p>
       <a href="#galeria" class="more">Descobreix més →</a>
     </div>
 
-    <div class="card reveal from-left fade-card" style="--d: 240ms">
+    <div class="card">
       <div class="icon"><i class="fa-solid fa-school"></i></div>
       <h3>Venda de tiquets</h3>
       <p>Aconsegueix el teu dorsal directament a l'escola Yglesias</p>
@@ -160,6 +164,7 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
