@@ -1,169 +1,203 @@
 <!doctype html>
 <html lang="ca">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Family Trail</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
-  <style>
-    /* Estilos corregidos para centrar el menú */
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: center; /* Centra el nav */
-      padding: 15px 5%;
-      position: relative; 
-      background-color: rgba(255, 255, 255, 0.9); /* Un poco de transparencia por si el banner sube */
-      width: 100%;
-      box-sizing: border-box;
-      z-index: 1000;
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Trail</title>
 
-    .brand {
-      position: absolute;
-      left: 5%;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    .brand img {
-      height: 45px;
-    }
+<style>
 
-    nav {
-      display: flex;
-      gap: 20px;
-    }
+/* Quita la barra superior */
+html, body{
+  margin:0;
+  padding:0;
+  font-family:'Poppins', sans-serif;
+}
 
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 600;
-      font-size: 0.9rem;
-      white-space: nowrap;
-    }
+/* HEADER */
 
-    nav a.active {
-      color: #27ae60;
-    }
+header{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:15px 5%;
+  position:relative;
+  background-color:white;
+  width:100%;
+  box-sizing:border-box;
+  border:none;
+}
 
-    /* Centrado del banner y botones */
-    .banner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 80px 20px;
-    }
+/* LOGO */
 
-    .btn-banner {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin: 20px auto;
-      padding: 12px 28px;
-      background: white;
-      border-radius: 50px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+.brand{
+  position:absolute;
+  left:5%;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
 
-    .cards {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 30px;
-      padding: 40px 20px;
-    }
+.brand img{
+  height:45px;
+}
 
-    .card {
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 300px;
-    }
-  </style>
+/* NAV */
+
+nav{
+  display:flex;
+  gap:20px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#333;
+  font-weight:600;
+  font-size:0.9rem;
+  white-space:nowrap;
+}
+
+nav a.active{
+  color:#27ae60;
+}
+
+/* BANNER */
+
+.banner{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  padding:80px 20px;
+}
+
+/* BOTÓN */
+
+.btn-banner{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin:20px auto;
+  padding:12px 28px;
+  background:white;
+  border-radius:50px;
+  text-decoration:none;
+  color:#333;
+  font-weight:bold;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* CARDS */
+
+.cards{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:30px;
+  padding:40px 20px;
+}
+
+.card{
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  max-width:300px;
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="brand">
-    <img src="img/logo.png" alt="Family Trail Logo">
-    <span>Family Trail</span>
-  </div>
-  
-  <nav>
-    <a href="index.html" class="active">Inici</a>
-    <a href="info.html">Info</a>
-    <a href="programa.html">Programa</a>
-    <a href="galeria.html">Galeria</a>
-    <a href="preparant.html">Preparant</a>
-    <a href="#colab">Col·laboradors</a>
-    <a href="#contacte">Contacte</a>
-  </nav>
+
+<div class="brand">
+<img src="img/logo.png" alt="Family Trail Logo">
+<span>Family Trail</span>
+</div>
+
+<nav>
+<a href="index.html" class="active">Inici</a>
+<a href="info.html">Info</a>
+<a href="programa.html">Programa</a>
+<a href="galeria.html">Galeria</a>
+<a href="preparant.html">Preparant</a>
+<a href="#colab">Col·laboradors</a>
+<a href="#contacte">Contacte</a>
+</nav>
+
 </header>
 
 <section class="banner" id="inici">
-  <div class="countdown">
-    <div class="time-box"><h3 id="dies">00</h3><span>Dies</span></div>
-    <div class="time-box"><h3 id="hores">00</h3><span>Hores</span></div>
-    <div class="time-box"><h3 id="minuts">00</h3><span>Minuts</span></div>
-    <div class="time-box"><h3 id="segons">00</h3><span>Segons</span></div>
-  </div>
 
-  <h1>Family Trail</h1>
-  <h2>Descobreix la natura en família</h2>
+<div class="countdown">
+<div class="time-box"><h3 id="dies">00</h3><span>Dies</span></div>
+<div class="time-box"><h3 id="hores">00</h3><span>Hores</span></div>
+<div class="time-box"><h3 id="minuts">00</h3><span>Minuts</span></div>
+<div class="time-box"><h3 id="segons">00</h3><span>Segons</span></div>
+</div>
 
-  <div class="meta">
-    <div><i class="fa-solid fa-calendar-days"></i> 19 d'abril</div>
-    <div><i class="fa-solid fa-location-dot"></i> Canet de Mar</div>
-    <div><i class="fa-solid fa-users"></i> Totes les edats</div>
-  </div>
+<h1>Family Trail</h1>
+<h2>Descobreix la natura en família</h2>
 
-  <p>Viu l'experiència de la Family Trail a Canet de Mar</p>
+<div class="meta">
+<div><i class="fa-solid fa-calendar-days"></i> 19 d'abril</div>
+<div><i class="fa-solid fa-location-dot"></i> Canet de Mar</div>
+<div><i class="fa-solid fa-users"></i> Totes les edats</div>
+</div>
 
-  <a href="#descobreix" class="btn-banner">Compra el tiquet a l'escola Yglesias <i class="fa-solid fa-angle-down"></i></a>
+<p>Viu l'experiència de la Family Trail a Canet de Mar</p>
+
+<a href="#descobreix" class="btn-banner">
+Compra el tiquet a l'escola Yglesias
+<i class="fa-solid fa-angle-down"></i>
+</a>
+
 </section>
 
 <section class="descobreix" id="descobreix">
-  <h2 class="section-title" style="text-align: center;">Descobreix el Family Trail</h2>
-  <p class="section-subtitle" style="text-align: center;">Una experiència única per a tota la família al cor de la natura</p>
-  
-  <div class="cards">
-    <div class="card">
-      <div class="icon"><i class="fa-solid fa-trophy"></i></div>
-      <h3>Programa</h3>
-      <p>Horaris, activitats i premis per a tots els participants</p>
-      <a href="programa.html" class="more">Descobreix més →</a>
-    </div>
 
-    <div class="card">
-      <div class="icon"><i class="fa-solid fa-camera"></i></div>
-      <h3>Galeria</h3>
-      <p>Fotos i vídeos de les edicions anteriors del trail</p>
-      <a href="#galeria" class="more">Descobreix més →</a>
-    </div>
+<h2 class="section-title" style="text-align:center;">Descobreix el Family Trail</h2>
+<p class="section-subtitle" style="text-align:center;">
+Una experiència única per a tota la família al cor de la natura
+</p>
 
-    <div class="card">
-      <div class="icon"><i class="fa-solid fa-school"></i></div>
-      <h3>Venda de tiquets</h3>
-      <p>Aconsegueix el teu dorsal directament a l'escola Yglesias</p>
-      <a href="#contacte" class="more">Més informació →</a>
-    </div>
-  </div>
+<div class="cards">
+
+<div class="card">
+<div class="icon"><i class="fa-solid fa-trophy"></i></div>
+<h3>Programa</h3>
+<p>Horaris, activitats i premis per a tots els participants</p>
+<a href="programa.html" class="more">Descobreix més →</a>
+</div>
+
+<div class="card">
+<div class="icon"><i class="fa-solid fa-camera"></i></div>
+<h3>Galeria</h3>
+<p>Fotos i vídeos de les edicions anteriors del trail</p>
+<a href="#galeria" class="more">Descobreix més →</a>
+</div>
+
+<div class="card">
+<div class="icon"><i class="fa-solid fa-school"></i></div>
+<h3>Venda de tiquets</h3>
+<p>Aconsegueix el teu dorsal directament a l'escola Yglesias</p>
+<a href="#contacte" class="more">Més informació →</a>
+</div>
+
+</div>
 </section>
 
 <script src="script.js"></script>
+
 </body>
 </html>
+
 
 
 
