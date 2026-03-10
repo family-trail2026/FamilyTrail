@@ -7,6 +7,36 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <style>
+    /* Estilos para centrar elementos */
+    .banner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .btn-banner {
+      display: inline-block;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  </style>
 </head>
 
 <body>
@@ -24,7 +54,6 @@
     <a href="#colab">Col·laboradors</a>
     <a href="#contacte">Contacte</a>
   </nav>
-
 </header>
 
 <section class="banner" id="inici">
@@ -46,13 +75,13 @@
 
   <p>Viu l'experiència de la Family Trail a Canet de Mar</p>
 
-  <a href="#descobreix" class="btn-banner">Inscriu-te ara <i class="fa-solid fa-angle-down"></i></a>
+  <a href="#descobreix" class="btn-banner">Compra el tiquet a l'escola Yglesias <i class="fa-solid fa-angle-down"></i></a>
 </section>
 
-<!-- Secció Descobreix -->
 <section class="descobreix" id="descobreix">
-  <h2 class="section-title reveal from-left">Descobreix el Family Trail</h2>
-  <p class="section-subtitle reveal from-left" style="--d: 80ms">Una experiència única per a tota la família al cor de la natura</p>
+  <h2 class="section-title reveal from-left" style="text-align: center;">Descobreix el Family Trail</h2>
+  <p class="section-subtitle reveal from-left" style="--d: 80ms; text-align: center;">Una experiència única per a tota la família al cor de la natura</p>
+  
   <div class="cards">
     <div class="card reveal from-left fade-card" style="--d: 0ms">
       <div class="icon"><i class="fa-solid fa-trophy"></i></div>
@@ -69,10 +98,10 @@
     </div>
 
     <div class="card reveal from-left fade-card" style="--d: 240ms">
-      <div class="icon"><i class="fa-solid fa-gift"></i></div>
-      <h3>Inscripcions</h3>
-      <p>Assegura la teva plaça i descobreix els packs disponibles</p>
-      <a href="#inscripcions" class="more">Descobreix més →</a>
+      <div class="icon"><i class="fa-solid fa-school"></i></div>
+      <h3>Venda de tiquets</h3>
+      <p>Aconsegueix el teu dorsal directament a l'escola Yglesias</p>
+      <a href="#contacte" class="more">Més informació →</a>
     </div>
   </div>
 </section>
@@ -80,9 +109,6 @@
 <script src="script.js"></script>
 </body>
 </html>
-
-</html>
-
 
 
 
