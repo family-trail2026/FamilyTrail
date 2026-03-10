@@ -8,58 +8,99 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   
-  <style>
-    /* --- AJUSTES DE CENTRADO --- */
-    
-    /* Centrar el menú de navegación */
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between; /* Mantiene el logo a un lado y el nav centrado en el espacio restante */
-      padding: 10px 5%;
-    }
+<style>
+  /* --- AJUSTE PARA CENTRAR EL MENÚ REALMENTE --- */
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Esto centra el contenido (el nav) */
+    padding: 20px 5%;
+    position: relative; /* Necesario para posicionar el logo */
+    min-height: 80px;
+  }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-grow: 1; /* Esto hace que el nav ocupe el espacio central */
-      gap: 20px;
-    }
+  .brand {
+    position: absolute; /* Sacamos el logo del flujo para que no empuje el menú */
+    left: 5%; /* Lo pegamos a la izquierda */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 
-    /* Asegurar que el banner y botones estén centrados */
-    .banner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
+  nav {
+    display: flex;
+    gap: 25px;
+  }
 
-    .btn-banner {
-      display: inline-block;
-      margin: 20px auto;
-    }
+  nav a {
+    text-decoration: none;
+    color: #333; /* O el color que prefieras */
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
 
-    .cards {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+  nav a.active {
+    color: #27ae60; /* El verde de tu diseño */
+  }
 
-    .card {
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+  /* --- RESTO DE AJUSTES (BANNER Y BOTONES) --- */
+  
+  .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+  }
 
-    /* Estilo extra para que los enlaces no se peguen */
-    nav a {
-      text-decoration: none;
-      color: inherit;
-      font-weight: 600;
-    }
-  </style>
+  .btn-banner {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 50px;
+  }
+
+  .card {
+    text-align: center;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
+
+<header>
+  <div class="brand">
+    <img src="img/logo.png" alt="Logo" style="height: 40px;">
+    <span>Family Trail</span>
+  </div>
+  
+  <nav>
+    <a href="index.html" class="active">Inici</a>
+    <a href="info.html">Info</a>
+    <a href="programa.html">Programa</a>
+    <a href="galeria.html">Galeria</a>
+    <a href="preparant.html">Preparant</a>
+    <a href="#colab">Col·laboradors</a>
+    <a href="#contacte">Contacte</a>
+  </nav>
+</header>
 </head>
 
 <body>
@@ -133,6 +174,7 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
