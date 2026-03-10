@@ -1,129 +1,308 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Family Trail - Informació</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Family Trail - Informació</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* QUITA LA DOBLE BARRA SUPERIOR */
+html, body{
+  margin:0;
+  padding:0;
+  font-family:'Poppins', sans-serif;
+}
+
+/* HEADER */
+
+header{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:15px 5%;
+  position:relative;
+  width:100%;
+  box-sizing:border-box;
+  background:white;
+  border:none;
+}
+
+.brand{
+  position:absolute;
+  left:5%;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo{
+  height:45px;
+}
+
+nav{
+  display:flex;
+  gap:20px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#333;
+  font-weight:600;
+  font-size:0.9rem;
+  white-space:nowrap;
+}
+
+nav a.active{
+  color:#27ae60;
+}
+
+/* INFO SECTION */
+
+.info-section{
+  padding:80px 20px;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+}
+
+.info-content{
+  display:flex;
+  flex-wrap:wrap;
+  gap:40px;
+  align-items:center;
+}
+
+.info-text{
+  flex:1;
+  min-width:300px;
+}
+
+.info-map{
+  flex:1;
+  min-width:300px;
+}
+
+/* DESCUBREIX */
+
+.descobreix{
+  padding:80px 20px;
+  text-align:center;
+}
+
+.section-title{
+  font-size:2rem;
+  margin-bottom:10px;
+}
+
+.section-subtitle{
+  color:#666;
+  margin-bottom:40px;
+}
+
+.cards{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:30px;
+}
+
+.card{
+  max-width:300px;
+  padding:25px;
+  border-radius:12px;
+  background:white;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.icon{
+  font-size:28px;
+  margin-bottom:15px;
+  color:#27ae60;
+}
+
+/* FOOTER */
+
+.site-footer{
+  background:#111;
+  color:white;
+  padding:40px 20px;
+  text-align:center;
+}
+
+.footer-logo{
+  height:40px;
+}
+
+.footer-title{
+  font-weight:700;
+  margin-top:10px;
+}
+
+.footer-tagline{
+  margin:15px 0;
+  color:#bbb;
+}
+
+.footer-social{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin:20px 0;
+}
+
+.social-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:#222;
+  color:white;
+  text-decoration:none;
+}
+
+.footer-copy{
+  font-size:0.85rem;
+  color:#aaa;
+}
+
+</style>
+
 </head>
+
 <body>
-  <header>
-    <div class="brand">
-      <img src="img/logo.png" alt="Family Trail Logo" class="logo">
-      <span>Family Trail</span>
-    </div>
-    <nav>
-      <a href="index.html" class="nav-link">Inici</a>
-      <a href="info.html" class="nav-link active">Info</a>
-      <a href="programa.html" class="nav-link">Programa</a>
-      <a href="galeria.html" class="nav-link">Galeria</a>
-      <a href="#preparant" class="nav-link">Preparant</a>
-      <a href="#colab" class="nav-link">Col·laboradors</a>
-      <a href="#contacte" class="nav-link">Contacte</a>
-    </nav>
-  </header>
 
-  <section id="info" class="info-section">
-    <div class="container">
-      <div class="info-content">
-        <div class="info-text">
-          <h2>Informació del Family Trail</h2>
-          <p class="subtitle">Tot el que necessites saber sobre l'esdeveniment</p>
+<header>
 
-          <h3>Sobre el Family Trail</h3>
-          <p>
-            La Family Trail, moltíssim més que una simple carrera és un dia sencer per compartir, riure, i explorar la natura amb aquells a qui més aprecies. Un recorregut planejat, així cada família pot gaudir del trajecte al seu ritme, envoltats de boscos, somriures i moments genials.
-          </p>
-          <p>
-            Amb diverses distàncies ajustades per a totes les edats i nivells, busquem que cada família descobreixi el seu ritme. I gaudiu cada pas del trajecte. Sense competir, simplement diversió, naturalesa, bones estones.
-          </p>
-          <p>
-            Això celebra ideals de vida sana, l'amor pel planeta, i com n'és de rellevant la família. Una ocasió ideal, per allunyar-se del dia a dia, i estar amb els seus estimats.
-          </p>
-        </div>
+<div class="brand">
+<img src="img/logo.png" alt="Family Trail Logo" class="logo">
+<span>Family Trail</span>
+</div>
 
-        <div class="info-map">
-          <iframe
-            src="https://www.komoot.com/tour/2039631120/embed?share_token=aKPCLjaOSbw2N1ps1lbCQf384tdsDLlOhz3cVU3NZvaBTVM4o3&utm_source=embed&utm_medium=embed&utm_campaign=tour_embed"
-            width="100%"
-            height="500"
-            style="border:none; border-radius: 16px;"
-            loading="lazy"
-          ></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
+<nav>
+<a href="index.html">Inici</a>
+<a href="info.html" class="active">Info</a>
+<a href="programa.html">Programa</a>
+<a href="galeria.html">Galeria</a>
+<a href="#preparant">Preparant</a>
+<a href="#colab">Col·laboradors</a>
+<a href="#contacte">Contacte</a>
+</nav>
 
-  <!-- SECCIÓ DESCOBREIX (les 3 cards) -->
-  <section class="descobreix">
-    <h2 class="section-title">Descobreix el Family Trail</h2>
-    <p class="section-subtitle">Un esdeveniment per a tothom</p>
+</header>
 
-    <div class="cards">
-      <div class="card visible">
-        <div class="icon"><i class="fa-solid fa-users"></i></div>
-        <h3>Per a tothom</h3>
-        <p>
-          Activitat adaptada a tots els nivells i edats. Tant si ets un corredor experimentat com si prefereixes caminar tranquil·lament.
-        </p>
-      </div>
+<section id="info" class="info-section">
 
-      <div class="card visible">
-        <div class="icon"><i class="fa-solid fa-tree"></i></div>
-        <h3>Entorn natural</h3>
-        <p>
-          Gaudeix dels paisatges més bonics de Sant Julià de Lòria, amb camins segurs i ben senyalitzats.
-        </p>
-      </div>
+<div class="container">
 
-      <div class="card visible">
-        <div class="icon"><i class="fa-solid fa-people-roof"></i></div>
-        <h3>Ambient familiar</h3>
-        <p>
-          Un esdeveniment pensat per gaudir en família, amb activitats complementàries i un ambient acollidor.
-        </p>
-      </div>
-    </div>
-  </section>
+<div class="info-content">
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <img src="img/logo.png" alt="Family Trail" class="footer-logo" />
-        <div class="footer-title">Family Trail</div>
-      </div>
+<div class="info-text">
 
-      <p class="footer-tagline">Connectant famílies amb la natura</p>
+<h2>Informació del Family Trail</h2>
+<p class="subtitle">Tot el que necessites saber sobre l'esdeveniment</p>
 
-      <div class="footer-social">
-        <!-- Instagram -->
-        <a href="https://www.instagram.com/fedacyglesias/" target="_blank" aria-label="Instagram" class="social-btn" rel="noopener">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true">
-            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="1.6"/>
-            <path d="M12 8.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7Z" stroke="currentColor" stroke-width="1.6"/>
-            <circle cx="17.5" cy="6.5" r="1.1" fill="currentColor"/>
-          </svg>
-        </a>
-        <!-- Email -->
-        <a href="jmarquez@fedac.cat" aria-label="Email" class="social-btn">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true">
-            <path d="M3 6.5h18v11H3z" stroke="currentColor" stroke-width="1.6" />
-            <path d="m3 7 9 6 9-6" stroke="currentColor" stroke-width="1.6" fill="none"/>
-          </svg>
-        </a>
-      </div>
+<h3>Sobre el Family Trail</h3>
 
-      <p class="footer-copy">© 2025 Family Trail. Tots els drets reservats.</p>
-    </div>
-  </footer>
+<p>
+La Family Trail, moltíssim més que una simple carrera és un dia sencer per compartir, riure, i explorar la natura amb aquells a qui més aprecies. Un recorregut planejat, així cada família pot gaudir del trajecte al seu ritme, envoltats de boscos, somriures i moments genials.
+</p>
 
-  <!-- Font Awesome (per als icones de les cards) -->
-  <script src="https://kit.fontawesome.com/8f0a4c2a32.js" crossorigin="anonymous"></script>
+<p>
+Amb diverses distàncies ajustades per a totes les edats i nivells, busquem que cada família descobreixi el seu ritme. I gaudiu cada pas del trajecte. Sense competir, simplement diversió, naturalesa, bones estones.
+</p>
 
-  <script src="script.js"></script>
+<p>
+Això celebra ideals de vida sana, l'amor pel planeta, i com n'és de rellevant la família. Una ocasió ideal, per allunyar-se del dia a dia, i estar amb els seus estimats.
+</p>
+
+</div>
+
+<div class="info-map">
+
+<iframe
+src="https://www.komoot.com/tour/2039631120/embed?share_token=aKPCLjaOSbw2N1ps1lbCQf384tdsDLlOhz3cVU3NZvaBTVM4o3&utm_source=embed&utm_medium=embed&utm_campaign=tour_embed"
+width="100%"
+height="500"
+style="border:none;border-radius:16px;"
+loading="lazy">
+</iframe>
+
+</div>
+
+</div>
+</div>
+
+</section>
+
+<section class="descobreix">
+
+<h2 class="section-title">Descobreix el Family Trail</h2>
+<p class="section-subtitle">Un esdeveniment per a tothom</p>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon"><i class="fa-solid fa-users"></i></div>
+<h3>Per a tothom</h3>
+<p>Activitat adaptada a tots els nivells i edats. Tant si ets un corredor experimentat com si prefereixes caminar tranquil·lament.</p>
+</div>
+
+<div class="card">
+<div class="icon"><i class="fa-solid fa-tree"></i></div>
+<h3>Entorn natural</h3>
+<p>Gaudeix dels paisatges més bonics amb camins segurs i ben senyalitzats.</p>
+</div>
+
+<div class="card">
+<div class="icon"><i class="fa-solid fa-people-roof"></i></div>
+<h3>Ambient familiar</h3>
+<p>Un esdeveniment pensat per gaudir en família amb activitats complementàries.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer class="site-footer">
+
+<div class="footer-inner">
+
+<div class="footer-brand">
+<img src="img/logo.png" alt="Family Trail" class="footer-logo">
+<div class="footer-title">Family Trail</div>
+</div>
+
+<p class="footer-tagline">Connectant famílies amb la natura</p>
+
+<div class="footer-social">
+
+<a href="https://www.instagram.com/fedacyglesias/" target="_blank" class="social-btn">
+<svg viewBox="0 0 24 24" width="20" height="20"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M12 8.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7Z" stroke="currentColor" stroke-width="1.6" fill="none"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor"/></svg>
+</a>
+
+<a href="mailto:jmarquez@fedac.cat" class="social-btn">
+<svg viewBox="0 0 24 24" width="20" height="20"><path d="M3 6.5h18v11H3z" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="m3 7 9 6 9-6" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+</a>
+
+</div>
+
+<p class="footer-copy">© 2025 Family Trail. Tots els drets reservats.</p>
+
+</div>
+
+</footer>
+
+<script src="https://kit.fontawesome.com/8f0a4c2a32.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
 
