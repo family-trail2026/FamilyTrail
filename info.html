@@ -10,171 +10,173 @@
 
 <style>
 
-/* QUITA LA DOBLE BARRA SUPERIOR */
-html, body{
-  margin:0;
-  padding:0;
-  font-family:'Poppins', sans-serif;
+/* RESET */
+html,body{
+margin:0;
+padding:0;
+font-family:'Poppins',sans-serif;
 }
 
 /* HEADER */
 
 header{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:15px 5%;
-  position:relative;
-  width:100%;
-  box-sizing:border-box;
-  background:white;
-  border:none;
+display:flex;
+align-items:center;
+padding:15px 5%;
+position:relative;
+width:100%;
+box-sizing:border-box;
+background:white;
 }
 
+/* LOGO */
+
 .brand{
-  position:absolute;
-  left:5%;
-  display:flex;
-  align-items:center;
-  gap:10px;
+position:absolute;
+left:5%;
+display:flex;
+align-items:center;
+gap:10px;
 }
 
 .logo{
-  height:45px;
+height:45px;
 }
 
+/* NAV CENTRADO */
+
 nav{
-  display:flex;
-  gap:20px;
+width:100%;
+display:flex;
+justify-content:center;
+gap:25px;
 }
 
 nav a{
-  text-decoration:none;
-  color:#333;
-  font-weight:600;
-  font-size:0.9rem;
-  white-space:nowrap;
+text-decoration:none;
+color:#333;
+font-weight:600;
+font-size:0.95rem;
 }
 
 nav a.active{
-  color:#27ae60;
+color:#27ae60;
 }
 
-/* INFO SECTION */
+/* INFO */
 
 .info-section{
-  padding:80px 20px;
+padding:80px 20px;
 }
 
 .container{
-  max-width:1200px;
-  margin:auto;
+max-width:1200px;
+margin:auto;
 }
 
 .info-content{
-  display:flex;
-  flex-wrap:wrap;
-  gap:40px;
-  align-items:center;
+display:flex;
+flex-wrap:wrap;
+gap:40px;
+align-items:center;
 }
 
 .info-text{
-  flex:1;
-  min-width:300px;
+flex:1;
+min-width:300px;
 }
 
 .info-map{
-  flex:1;
-  min-width:300px;
+flex:1;
+min-width:300px;
 }
 
-/* DESCUBREIX */
+/* CARDS */
 
 .descobreix{
-  padding:80px 20px;
-  text-align:center;
+padding:80px 20px;
+text-align:center;
 }
 
 .section-title{
-  font-size:2rem;
-  margin-bottom:10px;
+font-size:2rem;
+margin-bottom:10px;
 }
 
 .section-subtitle{
-  color:#666;
-  margin-bottom:40px;
+color:#666;
+margin-bottom:40px;
 }
 
 .cards{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:30px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
 }
 
 .card{
-  max-width:300px;
-  padding:25px;
-  border-radius:12px;
-  background:white;
-  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+max-width:300px;
+padding:25px;
+border-radius:12px;
+background:white;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
 }
 
 .icon{
-  font-size:28px;
-  margin-bottom:15px;
-  color:#27ae60;
+font-size:28px;
+margin-bottom:15px;
+color:#27ae60;
 }
 
 /* FOOTER */
 
 .site-footer{
-  background:#111;
-  color:white;
-  padding:40px 20px;
-  text-align:center;
+background:#111;
+color:white;
+padding:40px 20px;
+text-align:center;
 }
 
 .footer-logo{
-  height:40px;
+height:40px;
 }
 
 .footer-title{
-  font-weight:700;
-  margin-top:10px;
+font-weight:700;
+margin-top:10px;
 }
 
 .footer-tagline{
-  margin:15px 0;
-  color:#bbb;
+margin:15px 0;
+color:#bbb;
 }
 
 .footer-social{
-  display:flex;
-  justify-content:center;
-  gap:15px;
-  margin:20px 0;
+display:flex;
+justify-content:center;
+gap:15px;
+margin:20px 0;
 }
 
 .social-btn{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:40px;
-  height:40px;
-  border-radius:50%;
-  background:#222;
-  color:white;
-  text-decoration:none;
+display:flex;
+align-items:center;
+justify-content:center;
+width:40px;
+height:40px;
+border-radius:50%;
+background:#222;
+color:white;
+text-decoration:none;
 }
 
 .footer-copy{
-  font-size:0.85rem;
-  color:#aaa;
+font-size:0.85rem;
+color:#aaa;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -191,7 +193,7 @@ nav a.active{
 <a href="info.html" class="active">Info</a>
 <a href="programa.html">Programa</a>
 <a href="galeria.html">Galeria</a>
-<a href="#preparant">Preparant</a>
+<a href="preparant.html">Preparant</a>
 <a href="#colab">Col·laboradors</a>
 <a href="#contacte">Contacte</a>
 </nav>
@@ -212,15 +214,15 @@ nav a.active{
 <h3>Sobre el Family Trail</h3>
 
 <p>
-La Family Trail, moltíssim més que una simple carrera és un dia sencer per compartir, riure, i explorar la natura amb aquells a qui més aprecies. Un recorregut planejat, així cada família pot gaudir del trajecte al seu ritme, envoltats de boscos, somriures i moments genials.
+La Family Trail és molt més que una simple carrera. És un dia per compartir, riure i explorar la natura amb la família.
 </p>
 
 <p>
-Amb diverses distàncies ajustades per a totes les edats i nivells, busquem que cada família descobreixi el seu ritme. I gaudiu cada pas del trajecte. Sense competir, simplement diversió, naturalesa, bones estones.
+Amb diferents distàncies adaptades a totes les edats, cada família pot gaudir del recorregut al seu ritme.
 </p>
 
 <p>
-Això celebra ideals de vida sana, l'amor pel planeta, i com n'és de rellevant la família. Una ocasió ideal, per allunyar-se del dia a dia, i estar amb els seus estimats.
+Celebra l'activitat física, la natura i el temps de qualitat amb els teus.
 </p>
 
 </div>
@@ -252,19 +254,19 @@ loading="lazy">
 <div class="card">
 <div class="icon"><i class="fa-solid fa-users"></i></div>
 <h3>Per a tothom</h3>
-<p>Activitat adaptada a tots els nivells i edats. Tant si ets un corredor experimentat com si prefereixes caminar tranquil·lament.</p>
+<p>Activitat adaptada a tots els nivells i edats.</p>
 </div>
 
 <div class="card">
 <div class="icon"><i class="fa-solid fa-tree"></i></div>
 <h3>Entorn natural</h3>
-<p>Gaudeix dels paisatges més bonics amb camins segurs i ben senyalitzats.</p>
+<p>Gaudeix de paisatges espectaculars i camins segurs.</p>
 </div>
 
 <div class="card">
 <div class="icon"><i class="fa-solid fa-people-roof"></i></div>
 <h3>Ambient familiar</h3>
-<p>Un esdeveniment pensat per gaudir en família amb activitats complementàries.</p>
+<p>Un esdeveniment pensat per compartir en família.</p>
 </div>
 
 </div>
@@ -272,8 +274,6 @@ loading="lazy">
 </section>
 
 <footer class="site-footer">
-
-<div class="footer-inner">
 
 <div class="footer-brand">
 <img src="img/logo.png" alt="Family Trail" class="footer-logo">
@@ -285,18 +285,16 @@ loading="lazy">
 <div class="footer-social">
 
 <a href="https://www.instagram.com/fedacyglesias/" target="_blank" class="social-btn">
-<svg viewBox="0 0 24 24" width="20" height="20"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M12 8.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7Z" stroke="currentColor" stroke-width="1.6" fill="none"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor"/></svg>
+Instagram
 </a>
 
 <a href="mailto:jmarquez@fedac.cat" class="social-btn">
-<svg viewBox="0 0 24 24" width="20" height="20"><path d="M3 6.5h18v11H3z" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="m3 7 9 6 9-6" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+Email
 </a>
 
 </div>
 
 <p class="footer-copy">© 2025 Family Trail. Tots els drets reservats.</p>
-
-</div>
 
 </footer>
 
