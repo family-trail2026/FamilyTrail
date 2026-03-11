@@ -1,1 +1,432 @@
-Programando...
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Preparant la Cursa - Family Trail</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="mobile.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* GENERAL */
+
+html,body{
+margin:0;
+padding:0;
+font-family:'Poppins',sans-serif;
+background:#f5f6f7;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+align-items:center;
+justify-content:center;
+padding:15px 5%;
+position:relative;
+background:white;
+}
+
+.brand{
+position:absolute;
+left:5%;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.brand img{
+height:45px;
+}
+
+nav{
+display:flex;
+gap:20px;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:600;
+font-size:0.9rem;
+}
+
+nav a.active{
+color:#27ae60;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:70px 20px 20px;
+}
+
+.hero h1{
+font-size:2.8rem;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#666;
+}
+
+/* COUNTDOWN */
+
+.countdown-box{
+max-width:1000px;
+margin:40px auto;
+background:linear-gradient(135deg,#27ae60,#16a085);
+padding:50px 20px;
+border-radius:20px;
+color:white;
+text-align:center;
+}
+
+.countdown{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.time{
+background:rgba(255,255,255,0.15);
+padding:20px;
+border-radius:15px;
+width:100px;
+}
+
+.time span{
+display:block;
+font-size:2rem;
+font-weight:700;
+}
+
+.time small{
+font-size:0.8rem;
+}
+
+/* ACTIVITATS */
+
+.activitats{
+padding:70px 20px;
+text-align:center;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+max-width:1100px;
+margin:auto;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+width:300px;
+text-align:left;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.icon-box{
+background:#27ae60;
+color:white;
+width:45px;
+height:45px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+.date{
+color:#27ae60;
+font-weight:600;
+font-size:0.9rem;
+}
+
+.time2{
+color:#777;
+font-size:0.9rem;
+margin-bottom:10px;
+}
+
+/* NOVETATS */
+
+.novetats{
+padding:80px 20px;
+text-align:center;
+}
+
+.news-grid{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+max-width:1200px;
+margin:auto;
+}
+
+.news-card{
+width:340px;
+background:white;
+border-radius:16px;
+overflow:hidden;
+box-shadow:0 6px 20px rgba(0,0,0,0.08);
+text-align:left;
+}
+
+.news-img{
+position:relative;
+}
+
+.news-img img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.date-badge{
+position:absolute;
+top:12px;
+right:12px;
+background:white;
+padding:6px 10px;
+border-radius:20px;
+font-size:0.8rem;
+box-shadow:0 2px 6px rgba(0,0,0,0.15);
+}
+
+.news-content{
+padding:20px;
+}
+
+.author{
+font-size:0.85rem;
+color:#777;
+margin-bottom:10px;
+}
+
+.news-content p{
+color:#666;
+font-size:0.9rem;
+}
+
+.news-content a{
+color:#27ae60;
+text-decoration:none;
+font-weight:600;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="brand">
+<img src="img/logo.png">
+<span>Family Trail</span>
+</div>
+
+<nav>
+<a href="index.html">Inici</a>
+<a href="info.html">Info</a>
+<a href="programa.html">Programa</a>
+<a href="galeria.html">Galeria</a>
+<a href="preparant.html" class="active">Preparant</a>
+<a href="colaboradors.html">Col·laboradors</a>
+<a href="#contacte">Contacte</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<h1>Preparant la Cursa</h1>
+
+<p>Segueix totes les novetats i activitats prèvies al gran dia</p>
+
+</section>
+
+
+<div class="countdown-box">
+
+<h2>Temps fins al Family Trail</h2>
+
+<div class="countdown">
+
+<div class="time">
+<span id="dies">00</span>
+<small>DIES</small>
+</div>
+
+<div class="time">
+<span id="hores">00</span>
+<small>HORES</small>
+</div>
+
+<div class="time">
+<span id="minuts">00</span>
+<small>MINUTS</small>
+</div>
+
+<div class="time">
+<span id="segons">00</span>
+<small>SEGONS</small>
+</div>
+
+</div>
+</div>
+
+
+<section class="activitats">
+
+<h2>Pròximes Activitats</h2>
+
+<div class="cards">
+
+<div class="card fade-card">
+
+<div class="icon-box"><i class="fa-solid fa-camera"></i></div>
+
+<div class="date"><i class="fa-regular fa-calendar"></i> 20 Maig 2025</div>
+<div class="time2"><i class="fa-regular fa-clock"></i> 18:00</div>
+
+<h3>Entrevista amb participants anteriors</h3>
+<p>Centre Cívic</p>
+
+</div>
+
+
+<div class="card fade-card">
+
+<div class="icon-box"><i class="fa-solid fa-users"></i></div>
+
+<div class="date"><i class="fa-regular fa-calendar"></i> 25 Maig 2025</div>
+<div class="time2"><i class="fa-regular fa-clock"></i> 10:00</div>
+
+<h3>Sessió d'entrenament conjunt</h3>
+<p>Plaça del Poble</p>
+
+</div>
+
+
+<div class="card fade-card">
+
+<div class="icon-box"><i class="fa-regular fa-calendar"></i></div>
+
+<div class="date"><i class="fa-regular fa-calendar"></i> 1 Juny 2025</div>
+<div class="time2"><i class="fa-regular fa-clock"></i> 19:00</div>
+
+<h3>Presentació oficial del recorregut</h3>
+<p>Ajuntament</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="novetats">
+
+<h2>Darreres Novetats</h2>
+
+<div class="news-grid">
+
+<div class="news-card fade-card">
+
+<div class="news-img">
+<img src="img/Family.jpg">
+<span class="date-badge"><i class="fa-regular fa-calendar"></i> 10 Septembre 2025</span>
+</div>
+
+<div class="news-content">
+
+<div class="author"><i class="fa-regular fa-user"></i> Equip Family Trail</div>
+
+<h3>Començem amb la Family</h3>
+
+<p>
+Avui hem començat amb els alumnes la Family Trail hem decidit que faria cadascu...
+</p>
+
+
+
+</div>
+
+</div>
+
+
+<div class="news-card fade-card">
+
+<div class="news-img">
+<img src="img/Web.png">
+<span class="date-badge"><i class="fa-regular fa-calendar"></i> 8 Gener 2026</span>
+</div>
+
+<div class="news-content">
+
+<div class="author"><i class="fa-regular fa-user"></i> Maria López</div>
+
+<h3>Pàgina web acabada</h3>
+
+<p>
+Després de molt de esforç hem pogut acabar l apàgina web
+</p>
+
+
+
+</div>
+
+</div>
+
+
+<div class="news-card fade-card">
+
+<div class="news-img">
+<img src="img/Yglesias.jpg">
+<span class="date-badge"><i class="fa-regular fa-calendar"></i>9 Març 2026 </span>
+</div>
+
+<div class="news-content">
+
+<div class="author"><i class="fa-regular fa-user"></i> Equip Family Trail</div>
+
+<h3>Comença la venta de entrades </h3>
+
+<p>
+Hem començat ha vendre entrades de la family trail, les podeu adquirir a fedac canet yglesias
+</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
