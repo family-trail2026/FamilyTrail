@@ -7,14 +7,201 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mobile.css">
   <script src="https://kit.fontawesome.com/8f0a4c2a32.js" crossorigin="anonymous"></script>
+
+  <style>
+    /* RESET IDÉNTICO A LAS OTRAS PÁGINAS */
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* HEADER UNIFICADO (Medidas exactas del index e info) */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 5%;
+      position: relative;
+      background-color: white;
+      width: 100%;
+      box-sizing: border-box;
+      border: none;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .brand {
+      position: absolute;
+      left: 5%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand img {
+      height: 45px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    nav a.active {
+      color: #27ae60;
+    }
+
+    /* ESTILOS ESPECÍFICOS DEL PROGRAMA */
+    .programa-section {
+      padding: 60px 20px;
+      text-align: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .subtitle {
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    .programa-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      text-align: left;
+    }
+
+    .programa-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .programa-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+
+    .green { color: #27ae60; }
+    .orange { color: #e67e22; }
+
+    .horari-item {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+      align-items: flex-start;
+    }
+
+    .horari-item i {
+      color: #27ae60;
+      margin-top: 5px;
+    }
+
+    .horari-item h3 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    .horari-item p {
+      margin: 0;
+      color: #555;
+    }
+
+    .premi-item {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .num {
+      background: #e67e22;
+      color: white;
+      width: 25px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    .inclou {
+      background: #fdf2e9;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 25px;
+    }
+
+    .inclou h3 {
+      margin-top: 0;
+      font-size: 1rem;
+      color: #d35400;
+    }
+
+    .inclou ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .inclou li {
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: #111;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .footer-logo {
+      height: 40px;
+    }
+
+    .footer-social {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .social-btn {
+      color: white;
+      text-decoration: none;
+      background: #222;
+      padding: 10px;
+      border-radius: 50%;
+      display: inline-flex;
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
   <div class="brand">
-    <img src="img/logo.png" alt="Family Trail Logo" class="logo">
+    <img src="img/logo.png" alt="Family Trail Logo">
     <span>Family Trail</span>
   </div>
   <nav>
@@ -26,7 +213,6 @@
     <a href="#colab">Col·laboradors</a>
     <a href="#contacte">Contacte</a>
   </nav>
- 
 </header>
 
 <section class="programa-section">
@@ -35,7 +221,6 @@
 
   <div class="programa-grid">
 
-    <!-- HORARIS DEL DIA -->
     <div class="programa-box horarios">
       <div class="programa-title green">
         <i class="fa-regular fa-clock"></i>
@@ -91,7 +276,6 @@
       </div>
     </div>
 
-    <!-- PREMIS I RECOMPENSES -->
     <div class="programa-box premis">
       <div class="programa-title orange">
         <i class="fa-solid fa-trophy"></i>
@@ -100,58 +284,40 @@
 
       <div class="premi-item"><span class="num">1</span>Trofeu per a les 3 primeres famílies</div>
       <div class="premi-item"><span class="num">2</span>Medalla commemorativa per a tots els participants</div>
-      <div class="premi-item"><span class="num">3</span>Sorteig de regals entre tots els inscrits</div>
+      <div class="premi-item"><span class="num">3</span>Sorteig de regals entre tots els que han comprat tiquet</div>
       <div class="premi-item"><span class="num">4</span>Pack de benvinguda amb samarreta oficial</div>
 
       <div class="inclou">
-        <h3><i class="fa-solid fa-gift"></i> Inclòs en la inscripció</h3>
+        <h3><i class="fa-solid fa-gift"></i> Inclòs amb el tiquet del cole</h3>
         <ul>
           <li>✔ Samarreta oficial del Family Trail</li>
           <li>✔ Dinar i avituallament</li>
           <li>✔ Assegurança de participants</li>
-          <li>✔ Dorsal </li>
+          <li>✔ Dorsal oficial</li>
         </ul>
       </div>
-
     </div>
   </div>
 </section>
-<!-- FOOTER -->
+
 <footer class="site-footer">
   <div class="footer-inner">
-    
     <div class="footer-brand">
       <img src="img/logo.png" alt="Family Trail" class="footer-logo" />
       <div class="footer-title">Family Trail</div>
     </div>
-
     <p class="footer-tagline">Connectant famílies amb la natura</p>
-
     <div class="footer-social">
-      <!-- Instagram -->
-      <a href="https://www.instagram.com/fedacyglesias/" target="_blank" aria-label="Instagram" class="social-btn" rel="noopener">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true">
-          <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="1.6"/>
-          <path d="M12 8.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7Z" stroke="currentColor" stroke-width="1.6"/>
-          <circle cx="17.5" cy="6.5" r="1.1" fill="currentColor"/>
-        </svg>
+      <a href="https://www.instagram.com/fedacyglesias/" target="_blank" class="social-btn">
+        <i class="fa-brands fa-instagram"></i>
       </a>
-
-      <!-- Email -->
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jmarquez@fedac.cat" target="_blank" aria-label="Email" class="social-btn" rel="noopener">
-
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true">
-          <path d="M3 6.5h18v11H3z" stroke="currentColor" stroke-width="1.6" />
-          <path d="m3 7 9 6 9-6" stroke="currentColor" stroke-width="1.6" fill="none"/>
-        </svg>
+      <a href="mailto:jmarquez@fedac.cat" class="social-btn">
+        <i class="fa-solid fa-envelope"></i>
       </a>
     </div>
-
     <p class="footer-copy">© 2025 Family Trail. Tots els drets reservats.</p>
   </div>
 </footer>
-
-
 
 </body>
 </html>
