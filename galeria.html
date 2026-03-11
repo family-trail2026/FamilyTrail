@@ -6,35 +6,193 @@
   <title>Family Trail - Galeria</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mobile.css">
+
+  <style>
+    /* RESET IDÉNTICO */
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* HEADER UNIFICADO (Medidas exactas de index e info) */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 5%;
+      position: relative;
+      background-color: white;
+      width: 100%;
+      box-sizing: border-box;
+      border: none;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .brand {
+      position: absolute;
+      left: 5%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand img {
+      height: 45px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    nav a.active {
+      color: #27ae60;
+    }
+
+    /* ESTILOS DE GALERÍA */
+    .gallery-section {
+      padding: 60px 20px;
+      text-align: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery-title {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .gallery-subtitle {
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .gallery-filters {
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 10px 20px;
+      border: none;
+      background: #f0f0f0;
+      border-radius: 30px;
+      cursor: pointer;
+      font-family: inherit;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background: #27ae60;
+      color: white;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.03);
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 8px;
+    }
+
+    /* FOOTER UNIFICADO */
+    .site-footer {
+      background: #111;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .footer-logo {
+      height: 40px;
+      margin-bottom: 15px;
+    }
+
+    .footer-social {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .social-btn {
+      color: white;
+      text-decoration: none;
+      background: #222;
+      padding: 10px;
+      border-radius: 50%;
+      display: inline-flex;
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
   <header>
     <div class="brand">
-      <img src="img/logo.png" alt="Family Trail Logo" class="logo">
+      <img src="img/logo.png" alt="Family Trail Logo">
       <span>Family Trail</span>
     </div>
 
     <nav>
-      <a href="index.html" class="nav-link">Inici</a>
-      <a href="info.html" class="nav-link">Info</a>
-      <a href="programa.html" class="nav-link">Programa</a>
-      <a href="galeria.html" class="nav-link active">Galeria</a>
-      <a href="preparant.html" class="nav-link">Preparant</a>
-      <a href="colab.html" class="nav-link">Col·laboradors</a>
-      <a href="contacte.html" class="nav-link">Contacte</a>
+      <a href="index.html">Inici</a>
+      <a href="info.html">Info</a>
+      <a href="programa.html">Programa</a>
+      <a href="galeria.html" class="active">Galeria</a>
+      <a href="preparant.html">Preparant</a>
+      <a href="#colab">Col·laboradors</a>
+      <a href="#contacte">Contacte</a>
     </nav>
-
   </header>
 
-  <!-- GALERIA -->
   <section class="gallery-section">
       <h2 class="gallery-title">Galeria d'Edicions Anteriors</h2>
       <p class="gallery-subtitle">Reviu els millors moments del Family Trail</p>
 
-      <!-- Filtros -->
       <div class="gallery-filters">
           <button class="filter-btn active" data-filter="all">Totes</button>
           <button class="filter-btn" data-filter="trail">Trail</button>
@@ -42,76 +200,37 @@
           <button class="filter-btn" data-filter="persones">Participants</button>
       </div>
 
-      <!-- Imágenes -->
       <div class="gallery-grid">
-          <img src="img/FamilyTrail1.png"
-               class="gallery-item" data-category="trail">
-
-          <img src="img/Paisage1.png"
-               class="gallery-item" data-category="trail">
-
-          <img src="img/Personas1.png"
-               class="gallery-item" data-category="natura">
-
-          <img src="https://images.unsplash.com/photo-1520975918319-6c2c1a2fd28c"
-               class="gallery-item" data-category="Participants">
-
-          <img src="https://images.unsplash.com/photo-1535914254981-b5012eebbd15"
-               class="gallery-item" data-category="persones">
-
-          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
-               class="gallery-item" data-category="natura">
+          <img src="img/FamilyTrail1.png" class="gallery-item" data-category="trail">
+          <img src="img/Paisage1.png" class="gallery-item" data-category="trail">
+          <img src="img/Personas1.png" class="gallery-item" data-category="natura">
+          <img src="https://images.unsplash.com/photo-1520975918319-6c2c1a2fd28c" class="gallery-item" data-category="persones">
+          <img src="https://images.unsplash.com/photo-1535914254981-b5012eebbd15" class="gallery-item" data-category="persones">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" class="gallery-item" data-category="natura">
       </div>
   </section>
 
-  <!-- LIGHTBOX -->
   <div id="lightbox" class="lightbox">
       <img id="lightbox-img">
   </div>
 
-
-  <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="footer-inner">
+    <img src="img/logo.png" alt="Family Trail" class="footer-logo" />
+    <div class="footer-title" style="font-weight: bold; margin-bottom: 10px;">Family Trail</div>
+    <p class="footer-tagline">Connectant famílies amb la natura</p>
 
-      <div class="footer-brand">
-        <img src="img/logo.png" alt="Family Trail" class="footer-logo" />
-        <div class="footer-title">Family Trail</div>
-      </div>
-
-      <p class="footer-tagline">Connectant famílies amb la natura</p>
-
-      <div class="footer-social">
-        <!-- Instagram -->
-        <a href="https://www.instagram.com/fedacyglesias/" target="_blank" aria-label="Instagram" class="social-btn" rel="noopener">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true">
-            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="1.6"/>
-            <path d="M12 8.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7Z" stroke="currentColor" stroke-width="1.6"/>
-            <circle cx="17.5" cy="6.5" r="1.1" fill="currentColor"/>
-          </svg>
-        </a>
-
-        <!-- Email -->
-        <a href="mailto:jmarquez@fedac.cat" aria-label="Email" class="social-btn">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true">
-            <path d="M3 6.5h18v11H3z" stroke="currentColor" stroke-width="1.6" />
-            <path d="m3 7 9 6 9-6" stroke="currentColor" stroke-width="1.6" fill="none"/>
-          </svg>
-        </a>
-      </div>
-
-      <p class="footer-copy">© 2025 Family Trail. Tots els drets reservats.</p>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/fedacyglesias/" target="_blank" class="social-btn">Instagram</a>
+      <a href="mailto:jmarquez@fedac.cat" class="social-btn">Email</a>
     </div>
+
+    <p class="footer-copy">© 2025 Family Trail. Tots els drets reservats.</p>
   </footer>
 
-
-
-  <!-- JS DENTRO DEL ARCHIVO -->
   <script>
     /* FILTRES */
     document.querySelectorAll(".filter-btn").forEach(btn => {
         btn.addEventListener("click", () => {
-
             document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
             btn.classList.add("active");
 
