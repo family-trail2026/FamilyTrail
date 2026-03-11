@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Family Trail - Col·laboradors</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+html,body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#f3f6f8;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+align-items:center;
+justify-content:center;
+padding:15px 5%;
+background:white;
+position:relative;
+}
+
+.brand{
+position:absolute;
+left:5%;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.brand img{
+height:45px;
+}
+
+nav{
+display:flex;
+gap:20px;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:600;
+font-size:0.9rem;
+}
+
+nav a.active{
+color:#27ae60;
+}
+
+/* TITULO */
+
+.page-header{
+text-align:center;
+padding:70px 20px 30px 20px;
+}
+
+.page-header h1{
+font-size:2.4rem;
+margin-bottom:10px;
+}
+
+.page-header p{
+color:#6b7280;
+}
+
+/* LOGOS */
+
+.logos-section {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  /* Mantiene el tamaño mínimo para que no se vean gigantes en pantallas pequeñas */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+  gap: 25px;
+  padding: 20px;
+  align-items: center; /* Centra los logos verticalmente si tienen distintas alturas */
+}
+
+.logo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.logo-card img {
+  width: 100%;
+  /* Definimos una altura fija para que todos ocupen el mismo espacio vertical */
+  height: 80px; 
+  /* 'contain' es la clave: evita que se corten los logos */
+  object-fit: contain; 
+  filter: grayscale(100%);
+  margin-bottom: 10px;
+}
+
+.logo-card:hover {
+  transform: translateY(-5px);
+}
+
+.logo-card p {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* CAJA PATROCINADOR */
+
+.sponsor-box{
+max-width:900px;
+margin:70px auto;
+background:white;
+padding:60px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+.sponsor-box h2{
+font-size:1.8rem;
+margin-bottom:15px;
+}
+
+.sponsor-box p{
+color:#6b7280;
+max-width:600px;
+margin:auto;
+line-height:1.6;
+}
+
+.sponsor-btn{
+display:inline-block;
+margin-top:30px;
+background:#27ae60;
+color:white;
+padding:14px 30px;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+transition:0.2s;
+}
+
+.sponsor-btn:hover{
+background:#1f8a4d;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="brand">
+<img src="img/logo.png">
+<span>Family Trail</span>
+</div>
+
+<nav>
+<a href="index.html">Inici</a>
+<a href="info.html">Info</a>
+<a href="programa.html">Programa</a>
+<a href="galeria.html">Galeria</a>
+<a href="preparant.html">Preparant</a>
+<a href="colaboradors.html" class="active">Col·laboradors</a>
+<a href="#contacte">Contacte</a>
+</nav>
+
+</header>
+
+
+<section class="page-header">
+
+<h1>Col·laboradors i Patrocinadors</h1>
+
+<p>Gràcies al seu suport fem possible aquest esdeveniment</p>
+
+</section>
+
+
+<section class="logos-section">
+
+<div class="logo-card">
+<img src="img/Milarr-grande.jpg">
+<p>Milar</p>
+</div>
+
+<div class="logo-card">
+<img src="img/images.png">
+<p>FEDAC</p>
+</div>
+
+<div class="logo-card">
+<img src="img/Tabe.jpg">
+<p>Ferrateria Tabe</p>
+</div>
+
+<div class="logo-card">
+<img src="img/Cervesa.jpg">
+<p>Electrodomèstics Cervera Arenys de Mar</p>
+</div>
+
+
+<div class="logo-card">
+<img src="img/images (2).jpg">
+<p>Padel Canet Club</p>
+</div>
+
+<!-- PUEDES AÑADIR MÁS -->
+<div class="logo-card">
+<img src="img/farmaçia.png">
+<p>Farmàcia Canetum</p>
+</div>
+
+<div class="logo-card">
+<img src="img/camping.jpg">
+<p>Camping Globo</p>
+</div>
+
+<div class="logo-card">
+<img src="img/Nova.png">
+<p>La nova botiga</p>
+</div>
+
+<div class="logo-card">
+<img src="img/LLenín.png">
+<p>Llenín</p>
+</div>
+
+<div class="logo-card">
+<img src="img/Clinica.png">
+<p>Clínica mavp</p>
+</div>
+
+<div class="logo-card">
+<img src="img/Variété.png">
+<p>Variété</p>
+</div>
+
+<div class="logo-card">
+<img src="img/loli.png">
+<p>Loli</p>
+</div>
+
+<div class="logo-card">
+<img src="img/egea.png">
+<p>Egea Descans</p>
+</div>
+
+<div class="logo-card">
+<img src="img/griu.png">
+<p>El Griu</p>
+</div>
+
+<div class="logo-card">
+<img src="img/gemma.png">
+<p>Gemma Renau</p>
+</div>
+
+<div class="logo-card">
+<img src="img/maher.png">
+<p>Maher</p>
+</div>
+
+<div class="logo-card">
+<img src="img/jijo.png">
+<p>Jijonenca Canet de mar</p>
+</div>
+
+<div class="logo-card">
+<img src="img/este.png">
+<p>EstetiKA</p>
+</div>
+
+<div class="logo-card">
+<img src="img/marina.png">
+<p>Marina Ustrell</p>
+</div>
+
+<div class="logo-card">
+<img src="img/drac.png">
+<p>Drac Groc</p>
+</div>
+
+<div class="logo-card">
+<img src="img/santi.png">
+<p>Santiveri</p>
+</div>
+
+<div class="logo-card">
+    <img src="img/eltoca.png">
+    <p>El tocador</p>
+</div>
+
+<div class="logo-card">
+    <img src="img/bambo.png">
+    <p>Bambola</p>
+</div>
+
+<div class="logo-card">
+    <img src="img/Canet.png">
+    <p>Canet de Mar</p>
+</div>
+
+<div class="logo-card">
+    <img src="img/campassol.jpg">
+    <p>Campassol</p>
+</div>
+
+
+</section>
+
+
+<section class="sponsor-box">
+
+<h2>Vols ser patrocinador?</h2>
+
+<p>
+Si estàs interessat en col·laborar amb el Family Trail i donar suport a aquesta iniciativa familiar,
+contacta amb nosaltres per conèixer les diferents opcions de patrocini.
+</p>
+
+<a href="mailto:jmarquez@fedac.cat" class="sponsor-btn">
+Contactar per patrocini
+</a>
+
+</section>
+
+
+</body>
+</html>
