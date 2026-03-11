@@ -1,0 +1,65 @@
+/* mobile.css - Ajustos per a dispositius mòbils */
+
+@media (max-width: 768px) {
+    /* 1. Header i Menú: Fem que el menú no s'amuntegui */
+    header {
+        flex-direction: column !important;
+        padding: 10px !important;
+        height: auto !important;
+    }
+
+    .brand {
+        position: static !important; /* El logo torna al centre */
+        margin-bottom: 10px;
+    }
+
+    nav {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 10px !important;
+    }
+
+    nav a {
+        font-size: 0.8rem !important;
+        padding: 5px !important;
+    }
+
+    /* 2. Banner: Ajustem mides de text */
+    .banner h1 {
+        font-size: 2rem !important;
+    }
+
+    .banner h2 {
+        font-size: 1.2rem !important;
+    }
+
+    .countdown {
+        gap: 5px !important;
+    }
+
+    .time-box {
+        min-width: 50px !important;
+        padding: 5px !important;
+    }
+
+    /* 3. Les Cartes (Cards): Una sota de l'altra */
+    .cards-container, .cards, .programa-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+        padding: 10px !important;
+    }
+
+    .custom-card, .card, .programa-box {
+        width: 100% !important;
+        max-width: 90% !important;
+        margin: 0 auto !important;
+    }
+
+    /* 4. Imatges de Galeria: 1 o 2 columnes com a molt */
+    .gallery-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+}
